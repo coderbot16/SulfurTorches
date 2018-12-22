@@ -9,11 +9,13 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import sulfurtorches.SulfurTorches;
 import sulfurtorches.blocks.BlockSulfurTorch;
+import sulfurtorches.items.ItemSulfurGoo;
 
 @Mod.EventBusSubscriber
 public class ModObjects {
 	public static BlockSulfurTorch SULFUR_TORCH;
 	public static Item SULFUR_TORCH_ITEM;
+	public static Item SULFUR_GOO;
 
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
@@ -33,6 +35,12 @@ public class ModObjects {
 		SULFUR_TORCH_ITEM.setUnlocalizedName(SulfurTorches.MODID+".sulfur_torch");
 
 		event.getRegistry().register(SULFUR_TORCH_ITEM);
+
+		SULFUR_GOO = new ItemSulfurGoo();
+		SULFUR_GOO.setRegistryName(new ResourceLocation(SulfurTorches.MODID, "sulfur_goo"));
+		SULFUR_GOO.setUnlocalizedName(SulfurTorches.MODID+".sulfur_goo");
+
+		event.getRegistry().register(SULFUR_GOO);
 
 		SulfurTorches.proxy.registerItemModels();
 	}

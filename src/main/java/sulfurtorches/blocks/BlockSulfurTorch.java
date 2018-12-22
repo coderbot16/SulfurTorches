@@ -4,7 +4,6 @@ import net.minecraft.block.BlockTorch;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
@@ -13,6 +12,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import sulfurtorches.Config;
 import sulfurtorches.client.ParticleSulfur;
+import sulfurtorches.init.ModObjects;
 
 import java.util.Random;
 
@@ -31,7 +31,7 @@ public class BlockSulfurTorch extends BlockTorch {
 		super.updateTick(worldIn, pos, state, random);
 
 		if(random.nextInt(Config.dropChance) == 0) {
-			spawnAsEntity(worldIn, pos, new ItemStack(Items.DIAMOND));
+			spawnAsEntity(worldIn, pos, new ItemStack(ModObjects.SULFUR_GOO));
 		}
 	}
 

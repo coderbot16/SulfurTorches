@@ -4,6 +4,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.oredict.OreDictionary;
+import sulfurtorches.init.ModObjects;
 import sulfurtorches.proxy.CommonProxy;
 
 @Mod(modid=SulfurTorches.MODID, name=SulfurTorches.NAME, version=SulfurTorches.VERSION)
@@ -21,5 +23,7 @@ public class SulfurTorches {
 	}
 
 	@Mod.EventHandler
-	public void init(FMLInitializationEvent event) { }
+	public void init(FMLInitializationEvent event) {
+		OreDictionary.registerOre("dyeRed", ModObjects.SULFUR_GOO);
+	}
 }
