@@ -1,0 +1,16 @@
+[
+{
+  "modid": "sulfurtorches",
+  "name": "Sulfur Torches",
+  "description": "Adds Sulfur Torches like the ones in old XyCraft",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["coderbot16"],
+  "credits": "Soaryn for the original rendition in XyCraft",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
