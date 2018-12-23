@@ -1,0 +1,6 @@
+{
+  "parent": "block/torch",
+  "textures": {
+    "torch": "sulfurtorches:blocks/metal_torch"
+  }
+}

@@ -8,6 +8,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import sulfurtorches.SulfurTorches;
+import sulfurtorches.blocks.BlockMetalTorch;
 import sulfurtorches.blocks.BlockSulfurTorch;
 import sulfurtorches.items.ItemSulfurGoo;
 
@@ -15,6 +16,10 @@ import sulfurtorches.items.ItemSulfurGoo;
 public class ModObjects {
 	public static BlockSulfurTorch SULFUR_TORCH;
 	public static Item SULFUR_TORCH_ITEM;
+
+	public static BlockMetalTorch METAL_TORCH;
+	public static Item METAL_TORCH_ITEM;
+
 	public static Item SULFUR_GOO;
 
 	@SubscribeEvent
@@ -26,6 +31,14 @@ public class ModObjects {
 		SULFUR_TORCH.setLightLevel(1.0F);
 
 		event.getRegistry().register(SULFUR_TORCH);
+
+		METAL_TORCH = new BlockMetalTorch();
+		METAL_TORCH.setRegistryName(new ResourceLocation(SulfurTorches.MODID, "metal_torch"));
+		METAL_TORCH.setUnlocalizedName(SulfurTorches.MODID+".metal_torch");
+		METAL_TORCH.setHardness(0.0F);
+		METAL_TORCH.setLightLevel(1.0F);
+
+		event.getRegistry().register(METAL_TORCH);
 	}
 
 	@SubscribeEvent
@@ -35,6 +48,12 @@ public class ModObjects {
 		SULFUR_TORCH_ITEM.setUnlocalizedName(SulfurTorches.MODID+".sulfur_torch");
 
 		event.getRegistry().register(SULFUR_TORCH_ITEM);
+
+		METAL_TORCH_ITEM = new ItemBlock(METAL_TORCH);
+		METAL_TORCH_ITEM.setRegistryName(new ResourceLocation(SulfurTorches.MODID, "metal_torch"));
+		METAL_TORCH_ITEM.setUnlocalizedName(SulfurTorches.MODID+".metal_torch");
+
+		event.getRegistry().register(METAL_TORCH_ITEM);
 
 		SULFUR_GOO = new ItemSulfurGoo();
 		SULFUR_GOO.setRegistryName(new ResourceLocation(SulfurTorches.MODID, "sulfur_goo"));

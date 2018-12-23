@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "facing=up": { "model": "sulfurtorches:metal_torch" },
+    "facing=east": { "model": "sulfurtorches:metal_torch_wall" },
+    "facing=south": { "model": "sulfurtorches:metal_torch_wall", "y": 90 },
+    "facing=west": { "model": "sulfurtorches:metal_torch_wall", "y": 180 },
+    "facing=north": { "model": "sulfurtorches:metal_torch_wall", "y": 270 }
+  }
+}
