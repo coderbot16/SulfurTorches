@@ -29,6 +29,7 @@ public class ModObjects {
 		SULFUR_TORCH.setUnlocalizedName(SulfurTorches.MODID+".sulfur_torch");
 		SULFUR_TORCH.setHardness(0.0F);
 		SULFUR_TORCH.setLightLevel(1.0F);
+		SULFUR_TORCH.setCreativeTab(SulfurTorches.TAB);
 
 		event.getRegistry().register(SULFUR_TORCH);
 
@@ -37,6 +38,7 @@ public class ModObjects {
 		METAL_TORCH.setUnlocalizedName(SulfurTorches.MODID+".metal_torch");
 		METAL_TORCH.setHardness(0.0F);
 		METAL_TORCH.setLightLevel(1.0F);
+		METAL_TORCH.setCreativeTab(SulfurTorches.TAB);
 
 		event.getRegistry().register(METAL_TORCH);
 	}
@@ -58,6 +60,7 @@ public class ModObjects {
 		SULFUR_GOO = new ItemSulfurGoo();
 		SULFUR_GOO.setRegistryName(new ResourceLocation(SulfurTorches.MODID, "sulfur_goo"));
 		SULFUR_GOO.setUnlocalizedName(SulfurTorches.MODID+".sulfur_goo");
+		SULFUR_GOO.setCreativeTab(SulfurTorches.TAB);
 
 		event.getRegistry().register(SULFUR_GOO);
 

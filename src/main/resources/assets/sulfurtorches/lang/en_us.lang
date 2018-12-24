@@ -1,3 +1,5 @@
 tile.sulfurtorches.sulfur_torch.name=Sulfur Torch
 tile.sulfurtorches.metal_torch.name=Metal Torch
 item.sulfurtorches.sulfur_goo.name=Sulfur Goo
+
+itemGroup.sulfurtorches=Sulfur Torches
